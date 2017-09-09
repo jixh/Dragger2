@@ -1,16 +1,11 @@
-package com.jktaihe.dragger2;
+package com.jktaihe.dragger2.di.main.way2;
 
 import android.app.Activity;
 
-import com.jktaihe.dragger2.qualifiers.Tags;
-
-import java.security.PublicKey;
-
-import javax.inject.Singleton;
+import com.jktaihe.dragger2.MainActivity;
 
 import dagger.Binds;
 import dagger.Module;
-import dagger.Provides;
 import dagger.android.ActivityKey;
 import dagger.android.AndroidInjector;
 import dagger.multibindings.IntoMap;
@@ -20,7 +15,7 @@ import dagger.multibindings.IntoMap;
  * blog: blog.jktaihe.com
  */
 @Module(subcomponents = MainSubComponet.class)
-abstract class MainModules {
+public abstract class MainModules {
 
 //    public MainModules(Activity activity){
 //        this.activity = activity;

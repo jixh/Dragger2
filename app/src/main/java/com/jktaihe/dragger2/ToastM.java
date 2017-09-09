@@ -1,5 +1,6 @@
 package com.jktaihe.dragger2;
 
+import android.app.Activity;
 import android.content.Context;
 import android.widget.Toast;
 import javax.inject.Inject;
@@ -9,7 +10,7 @@ import javax.inject.Inject;
  * blog: blog.jktaihe.com
  */
 
-public class ToastM<T extends Context> {
+public class ToastM<T extends Activity> {
 
     private T activity;
 
@@ -19,6 +20,6 @@ public class ToastM<T extends Context> {
     }
 
     public void toastS(){
-        Toast.makeText(activity.getApplicationContext(), "this is test", Toast.LENGTH_SHORT).show();
+        Toast.makeText(activity, "this is test", Toast.LENGTH_SHORT).show();
     }
 }

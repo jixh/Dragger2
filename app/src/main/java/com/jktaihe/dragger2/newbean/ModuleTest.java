@@ -9,7 +9,7 @@ import dagger.Provides;
  * blog: blog.jktaihe.com
  */
 @Module
-abstract class ModuleTest {
+public abstract class ModuleTest {
     @Provides
     static Testint provideTest(){
         return new Test();

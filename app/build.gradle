@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.jktaihe.dragger2"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -19,14 +19,19 @@ android {
     }
 }
 
+ext{
+    dagger_version = "2.11"
+    support_version = "26.0.1"
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile "com.android.support:appcompat-v7:$support_version"
+    compile "com.android.support:design:$support_version"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.google.dagger:dagger:2.+'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.+'
-    compile 'com.google.dagger:dagger-android:2.+'
-    compile 'com.google.dagger:dagger-android-support:2.+' // if you use the support libraries
-    annotationProcessor 'com.google.dagger:dagger-android-processor:2.+'
+    compile "com.google.dagger:dagger:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+    compile "com.google.dagger:dagger-android:$dagger_version"
+    compile "com.google.dagger:dagger-android-support:$dagger_version" // if you use the support libraries
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dagger_version"
 //    compile 'com.google.code.findbugs:3.0.1'
 }

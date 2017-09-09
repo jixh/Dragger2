@@ -1,4 +1,7 @@
-package com.jktaihe.dragger2;
+package com.jktaihe.dragger2.di.main.way1;
+
+import com.jktaihe.dragger2.MainActivity;
+import com.jktaihe.dragger2.di.fragment.FragmentModules;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -9,6 +12,6 @@ import dagger.android.ContributesAndroidInjector;
  */
 @Module
 public abstract class ContributesAndroidModule {
-    @ContributesAndroidInjector//(modules = { /* modules to install into the subcomponent */ })
+    @ContributesAndroidInjector(modules = {FragmentModules.class})
     abstract MainActivity contributeYourActivityInjector();
 }
