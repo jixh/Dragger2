@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.jktaihe.dragger2.newbean.Test;
+import com.jktaihe.dragger2.qualifiers.AppleBean;
+import com.jktaihe.dragger2.qualifiers.Tags;
 import javax.inject.Inject;
 import dagger.android.support.AndroidSupportInjection;
 
@@ -23,12 +25,11 @@ public class Fragment1 extends Fragment {
     @Inject
     Test test;
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         TextView tv = new TextView(container.getContext());
-        tv.setText("Fragment1");
+        tv.setText("Fragment1.");
         return tv;
     }
 

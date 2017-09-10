@@ -22,4 +22,8 @@ public class ToastM<T extends Activity> {
     public void toastS(){
         Toast.makeText(activity, "this is test", Toast.LENGTH_SHORT).show();
     }
+
+    public void toastS(String msg){
+        Toast.makeText(activity, msg, Toast.LENGTH_SHORT).show();
+    }
 }

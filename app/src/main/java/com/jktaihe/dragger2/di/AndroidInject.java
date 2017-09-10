@@ -21,7 +21,6 @@ public class AndroidInject {
 
         DaggerAppComponent.create().inject(appApplication);
 
-
         appApplication.registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
             @Override
             public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
